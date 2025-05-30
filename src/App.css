@@ -92,7 +92,7 @@ body{
 
 .menu-items.visible {
   max-height: 500px;
-  opacity: 50%;
+  opacity: 1; /* Changed from 50% to 1 (fully visible) */
 }
 
 .menu-items a {
