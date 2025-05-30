@@ -279,7 +279,7 @@ body{
   right: 0;
   bottom: 0;
   opacity: 0.5;
-  background-image:url('C:\Users\KIIT\Desktop\my_portfolio\public\sentiment.jpeg');
+  background-image:url('./assets/sentiment.jpeg');
   background-size:cover;
   position: absolute;
   z-index: -1;
