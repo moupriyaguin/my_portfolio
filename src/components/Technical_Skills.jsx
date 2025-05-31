@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaReact,
   FaHtml5,
@@ -22,87 +22,35 @@ import {
 } from "react-icons/si";
 
 const Skills = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); // Run once on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const skills = [
-    {
-      name: "C++",
-      icon: <SiCplusplus size={50} color="#00599C" />,
-      link: "https://isocpp.org/",
-    },
-    {
-      name: "JavaScript",
-      icon: <SiJavascript size={50} color="#F0DB4F" />,
-      link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-    },
-    {
-      name: "HTML",
-      icon: <FaHtml5 size={50} color="#E34C26" />,
-      link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-    },
-    {
-      name: "Python",
-      icon: <FaPython size={50} color="#3776AB" />,
-      link: "https://www.python.org/",
-    },
-    {
-      name: "SQL",
-      icon: <FaDatabase size={50} color="#f29111" />,
-      link: "https://en.wikipedia.org/wiki/SQL",
-    },
-    {
-      name: "Bootstrap",
-      icon: <SiBootstrap size={50} color="#563d7c" />,
-      link: "https://getbootstrap.com/",
-    },
-    {
-      name: "Tailwind CSS",
-      icon: <SiTailwindcss size={50} color="#38B2AC" />,
-      link: "https://tailwindcss.com/",
-    },
-    {
-      name: "React JS",
-      icon: <FaReact size={50} color="#61DBFB" />,
-      link: "https://react.dev/",
-    },
-    {
-      name: "Next.js",
-      icon: <SiNextdotjs size={50} color="black" />,
-      link: "https://nextjs.org/",
-    },
-    {
-      name: "Node.js",
-      icon: <SiNodedotjs size={50} color="#339933" />,
-      link: "https://nodejs.org/",
-    },
-    {
-      name: "Express.js",
-      icon: <SiExpress size={50} color="#000000" />,
-      link: "https://expressjs.com/",
-    },
-    {
-      name: "Git",
-      icon: <FaGitAlt size={50} color="#F1502F" />,
-      link: "https://git-scm.com/",
-    },
-    {
-      name: "GitHub",
-      icon: <FaGithub size={50} color="black" />,
-      link: "https://github.com/",
-    },
-    {
-      name: "MySQL",
-      icon: <SiMysql size={50} color="#00758f" />,
-      link: "https://www.mysql.com/",
-    },
-    {
-      name: "Firebase",
-      icon: <SiFirebase size={50} color="#FFCA28" />,
-      link: "https://firebase.google.com/",
-    },
-    {
-      name: "MongoDB",
-      icon: <SiMongodb size={50} color="#47A248" />,
-      link: "https://www.mongodb.com/",
-    },
+    { name: "C++", icon: <SiCplusplus size={50} color="#00599C" />, link: "https://isocpp.org/" },
+    { name: "JavaScript", icon: <SiJavascript size={50} color="#F0DB4F" />, link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { name: "HTML", icon: <FaHtml5 size={50} color="#E34C26" />, link: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { name: "Python", icon: <FaPython size={50} color="#3776AB" />, link: "https://www.python.org/" },
+    { name: "SQL", icon: <FaDatabase size={50} color="#f29111" />, link: "https://en.wikipedia.org/wiki/SQL" },
+    { name: "Bootstrap", icon: <SiBootstrap size={50} color="#563d7c" />, link: "https://getbootstrap.com/" },
+    { name: "Tailwind CSS", icon: <SiTailwindcss size={50} color="#38B2AC" />, link: "https://tailwindcss.com/" },
+    { name: "React JS", icon: <FaReact size={50} color="#61DBFB" />, link: "https://react.dev/" },
+    { name: "Next.js", icon: <SiNextdotjs size={50} color="black" />, link: "https://nextjs.org/" },
+    { name: "Node.js", icon: <SiNodedotjs size={50} color="#339933" />, link: "https://nodejs.org/" },
+    { name: "Express.js", icon: <SiExpress size={50} color="#000000" />, link: "https://expressjs.com/" },
+    { name: "Git", icon: <FaGitAlt size={50} color="#F1502F" />, link: "https://git-scm.com/" },
+    { name: "GitHub", icon: <FaGithub size={50} color="black" />, link: "https://github.com/" },
+    { name: "MySQL", icon: <SiMysql size={50} color="#00758f" />, link: "https://www.mysql.com/" },
+    { name: "Firebase", icon: <SiFirebase size={50} color="#FFCA28" />, link: "https://firebase.google.com/" },
+    { name: "MongoDB", icon: <SiMongodb size={50} color="#47A248" />, link: "https://www.mongodb.com/" },
   ];
 
   const softSkills = [
@@ -138,7 +86,7 @@ const Skills = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(4, 1fr)",
+          gridTemplateColumns: isMobile ? "repeat(2, 1fr)" : "repeat(4, 1fr)",
           justifyContent: "center",
           gap: "30px",
           width: "100%",
@@ -218,4 +166,5 @@ const Skills = () => {
     </div>
   );
 };
+
 export default Skills;

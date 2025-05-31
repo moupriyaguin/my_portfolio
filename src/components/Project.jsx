@@ -64,7 +64,7 @@ const Project = () => {
             style={{
               flex: 1,
               padding: "20px",
-              height: "200px",
+              height: "245px",
               backgroundColor: "black",
               opacity: "70%",
               borderRadius: "8px",

@@ -13,6 +13,27 @@ const Education = () => {
         flexDirection: "column",
       }}
     >
+      <style>
+        {`
+          @media (max-width: 768px) {
+            #college-education,
+            #school-education {
+              flex-direction: column !important;
+              text-align: center !important;
+            }
+
+            .education-details {
+              padding: 10px !important;
+            }
+
+            .education-image {
+              height: 250px !important;
+              margin-bottom: 20px;
+            }
+          }
+        `}
+      </style>
+
       <h2
         style={{
           fontSize: "2.5rem",
@@ -24,6 +45,7 @@ const Education = () => {
       >
         Education
       </h2>
+
       <div
         id="college-education"
         style={{
@@ -33,9 +55,9 @@ const Education = () => {
           padding: "40px 20px",
           alignItems: "center",
           marginBottom: "40px",
-          background: "rgba(255, 255, 255, 0.15)", // translucent background
-          backdropFilter: "blur(10px)", // blur effect
-          WebkitBackdropFilter: "blur(10px)", // Safari support
+          background: "rgba(255, 255, 255, 0.15)",
+          backdropFilter: "blur(10px)",
+          WebkitBackdropFilter: "blur(10px)",
           borderRadius: "20px",
           boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
           border: "1px solid rgba(255, 255, 255, 0.18)",
@@ -114,7 +136,8 @@ const Education = () => {
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+              e.currentTarget.style.boxShadow =
+                "0 4px 8px rgba(0, 0, 0, 0.1)";
             }}
           ></div>
         </a>
@@ -161,7 +184,8 @@ const Education = () => {
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "scale(1)";
-              e.currentTarget.style.boxShadow = "0 4px 8px rgba(0, 0, 0, 0.1)";
+              e.currentTarget.style.boxShadow =
+                "0 4px 8px rgba(0, 0, 0, 0.1)";
             }}
           ></div>
         </a>
