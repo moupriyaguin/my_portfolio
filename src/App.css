@@ -190,13 +190,11 @@ html {
 .weather-app {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   text-align: justify;
-  color: rgb(201, 233, 249);
-  padding-top: 80px;  /* space for top content */
-  padding-bottom: 60px;  /* prevent bottom cutoff */
+  color:rgb(201, 233, 249);
 }
-
 
 .weather-video-background {
   position: absolute;
@@ -214,13 +212,14 @@ html {
 }
 
 .content-overlay {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   color: white;
   padding: 20px;
-  z-index: 2;
-  max-width: 90%;
-  margin: 0 auto;
+  z-index: 1; 
 }
 
 .app-title {
