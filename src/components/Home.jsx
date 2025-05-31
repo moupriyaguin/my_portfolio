@@ -14,7 +14,7 @@ const Home = () => {
       className="home-page d-flex justify-content-center align-items-center vh-100"
     >
       <div className="glass-box">
-        <h1 className="typing-text" style={{ fontSize: "2rem" }}>Welcome to My Portfolio</h1>
+        <h1 className="typing-text">Welcome to My Portfolio</h1>
         <p style={{ fontSize: "1rem" }}>
           I’m Moupriya Guin, a passionate developer with a love for turning
           ideas into impactful digital experiences. Dive in to explore my work,

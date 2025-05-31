@@ -9,7 +9,7 @@ const Project = () => {
         minHeight: "100vh",
         paddingTop: "60px",
         display: "flex",
-        backgroundColor:" rgb(206, 239, 248)",
+        backgroundColor: " rgb(206, 239, 248)",
         flexDirection: "column",
       }}
     >
@@ -38,9 +38,12 @@ const Project = () => {
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="content-overlay">
+        <div className="content-heading">
           <h1 className="app-title">Weather App</h1>
+        </div>
+        <div className="content-overlay">
           <div
+            className="app-description-left"
             style={{
               flex: 1,
               padding: "20px",
@@ -48,7 +51,7 @@ const Project = () => {
               color: "white",
             }}
           >
-            <p className="app-description">
+            <p>
               This app provides real-time and 7-day weather forecasts, allowing
               users to stay informed about the current weather conditions in
               their location. Built using React.js, the app fetches accurate
@@ -61,6 +64,7 @@ const Project = () => {
             </p>
           </div>
           <div
+            className="app-description-right"
             style={{
               flex: 1,
               padding: "20px",
@@ -71,7 +75,7 @@ const Project = () => {
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
             }}
           >
-            <p className="app-description">
+            <p>
               <strong>Key Features:</strong>
               <br />
               • Real-Time Weather: Instant access to current weather conditions
@@ -86,6 +90,8 @@ const Project = () => {
               error handling ensure a smooth and reliable experience.
             </p>
           </div>
+        </div>
+        <div className="project-button-container">
           <a
             href="your_project_link_here"
             target="_blank"
@@ -205,8 +211,8 @@ const Project = () => {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          backgroundImage:"url('ultrasound.jpg')",
-          backgroundRepeat:"no-repeat",
+          backgroundImage: "url('ultrasound.jpg')",
+          backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           // background: "linear-gradient(135deg, #f0f4ff, #ffffff)",
           borderRadius: "20px",
@@ -221,7 +227,11 @@ const Project = () => {
         }}
       >
         <h2
-          style={{ fontSize: "2.8rem", color: "rgb(68, 75, 78)", marginBottom: "20px" }}
+          style={{
+            fontSize: "2.8rem",
+            color: "rgb(68, 75, 78)",
+            marginBottom: "20px",
+          }}
         >
           PCOS Detection Using Ultrasound Images
         </h2>
@@ -323,7 +333,6 @@ const Project = () => {
       <div
         className="sentiment-analysis-project"
         style={{
-          
           // background: "linear-gradient(to right, #f8cdda,rgb(183, 37, 227))",
           padding: "4px",
           borderRadius: "20px",
@@ -337,7 +346,7 @@ const Project = () => {
       >
         <div
           style={{
-            // backgroundColor: " #ffffff",  
+            // backgroundColor: " #ffffff",
             borderRadius: "20px",
             padding: "40px 30px",
             display: "flex",
@@ -356,7 +365,6 @@ const Project = () => {
             e.currentTarget.style.boxShadow = "0 10px 25px rgba(0, 0, 0, 0.08)";
           }}
         >
-         
           <div
             style={{
               fontSize: "4rem",
@@ -366,7 +374,6 @@ const Project = () => {
             💬⭐
           </div>
 
-     
           <h2
             style={{
               fontSize: "2.5rem",
