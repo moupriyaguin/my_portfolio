@@ -288,6 +288,28 @@ body {
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .content-overlay {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .app-description-left,
+  .app-description-right {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .project-button-container {
+    position: static;
+    transform: none;
+    margin-top: 20px;
+  }
+}
+
 
 @keyframes slideIn {
   to {
