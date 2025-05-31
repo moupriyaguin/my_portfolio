@@ -25,23 +25,83 @@ const Project = () => {
         Technical Experience - Self initiated projects
       </h2>
 
-      <div className="weather-app">
-        <div className="weather-video-background">
+      <div
+        className="weather-app"
+        style={{
+          position: "relative",
+          height: "100vh",
+          width: "100%",
+          overflow: "hidden",
+          backgroundColor: "#000",
+        }}
+      >
+        <div
+          className="weather-video-background"
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            overflow: "hidden",
+            zIndex: 0,
+          }}
+        >
           <video
             autoPlay
             loop
             muted
             preload="auto"
             className="background-video"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+            }}
           >
             <source src="Weather Change Video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="content-heading">
+
+        <div
+          className="content-heading"
+          style={{
+            position: "relative",
+            zIndex: 11,
+            textAlign: "center",
+            marginTop: "20px",
+            color: "white",
+          }}
+        >
           <h1 className="app-title">Weather App</h1>
         </div>
-        <div className="content-overlay">
+
+        <div
+          className="content-overlay"
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            alignItems: "center",
+            borderRadius: "20px",
+            padding: "40px 30px",
+            boxShadow: "0 8px 32px 0 rgba(31, 38, 135, 0.37)",
+            border: "1px solid rgba(255, 255, 255, 0.2)",
+            gap: "30px",
+            overflow: "hidden",
+            zIndex: 10,
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+            color: "white",
+            maxWidth: "90%",
+            width: "800px",
+          }}
+        >
           <div
             className="app-description-left"
             style={{
@@ -70,9 +130,10 @@ const Project = () => {
               padding: "20px",
               height: "245px",
               backgroundColor: "black",
-              opacity: "70%",
+              opacity: 0.7,
               borderRadius: "8px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+              color: "white",
             }}
           >
             <p>
@@ -91,13 +152,47 @@ const Project = () => {
             </p>
           </div>
         </div>
-        <div className="project-button-container">
+
+        {/* Button container below content-overlay */}
+        <div
+          className="project-button-container"
+          style={{
+            position: "absolute",
+            top: "85%", // below content-overlay which is centered at 50% and approx 280px tall
+            left: "50%",
+            transform: "translateX(-50%)",
+            width: "100%",
+            textAlign: "center",
+            zIndex: 11,
+          }}
+        >
           <a
-            href="your_project_link_here"
+            href="https://github.com/moupriyaguin/Weather-App.git"
             target="_blank"
             rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
           >
-            <button className="project-button">Visit Project</button>
+            <button
+              className="project-button"
+              style={{
+                backgroundColor: "rgba(0,0,0,0.5)",
+                border: "none",
+                borderRadius: "12px",
+                color: "white",
+                padding: "12px 28px",
+                fontSize: "16px",
+                cursor: "pointer",
+                transition: "background-color 0.3s ease",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.backgroundColor = "rgba(0,0,0,0.7)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.backgroundColor = "rgba(0,0,0,0.5)")
+              }
+            >
+              Visit Project
+            </button>
           </a>
         </div>
       </div>
